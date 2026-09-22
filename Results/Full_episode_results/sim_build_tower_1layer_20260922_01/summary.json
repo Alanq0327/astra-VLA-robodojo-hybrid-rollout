@@ -1,0 +1,13 @@
+{
+  "episode_id": "a1c3811de8fd44fd94e21dc6b8093682",
+  "step_id": 240,
+  "success": true,
+  "terminated": true,
+  "truncated": false,
+  "complete": true,
+  "reason": "terminal",
+  "video_frames": 241,
+  "control_dt": 0.04,
+  "no_rollback": true,
+  "evaluation_case": null
+}

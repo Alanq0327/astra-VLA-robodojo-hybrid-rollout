@@ -1,0 +1,8 @@
+{
+  "teacher_model": "gpt-6-astra",
+  "teacher_model_provider": "openai",
+  "context_version": "v3",
+  "prompt_sha256": "7e35677dcdc04a000fd2ed7a19d3eac2f49d019025b67c140396aef3a5f7c04a",
+  "student_policy_version": "OpenPI-JAX/pi05_base_aloha_full_sim_arx-x5_seed_0/d15fb8bd1d29cb30",
+  "student_policy_sha256": "d15fb8bd1d29cb30b69f01b71c66596cb0293c1a8a94111b343c1580dd3e3e5b"
+}

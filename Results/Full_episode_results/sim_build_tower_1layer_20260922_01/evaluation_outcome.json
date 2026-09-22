@@ -1,0 +1,11 @@
+{
+  "evaluation_case": null,
+  "complete": true,
+  "valid_for_success_rate": true,
+  "native_success": true,
+  "native_score": 1.0,
+  "status": "native_completed",
+  "reason": "terminal",
+  "native_control_steps": 240,
+  "native_step_limit": 1050
+}

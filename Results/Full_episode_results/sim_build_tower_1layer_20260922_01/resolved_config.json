@@ -1,0 +1,551 @@
+{
+  "sim": {
+    "decimation": 1,
+    "dt": 0.004,
+    "render_interval": 10,
+    "scene": {
+      "num_envs": 1,
+      "env_spacing": 7
+    },
+    "seed": [
+      0
+    ]
+  },
+  "scene": {
+    "Room": {
+      "default": "Simple_Room_nolight",
+      "default_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "default_ori": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "Table": {
+      "default": "material_0122",
+      "scale": [
+        1.4,
+        1.1,
+        0.05
+      ],
+      "default_pos": [
+        0.0,
+        -0.05,
+        0.74
+      ],
+      "default_ori": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "random": false
+    },
+    "Background": {
+      "intensity": 1000,
+      "default": "brown_photostudio_02_4k.hdr",
+      "random": false
+    },
+    "Ground": {
+      "geometry": "cube",
+      "thickness": 0.1,
+      "axis": "Z",
+      "default_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": {
+        "type": "mdl",
+        "default": "material_0564",
+        "random": false
+      },
+      "physics_material": {
+        "static_friction": 1.0,
+        "dynamic_friction": 1.0,
+        "restitution": 0.0,
+        "friction_combine_mode": "multiply",
+        "restitution_combine_mode": "multiply",
+        "compliant_contact_stiffness": 0.0,
+        "compliant_contact_damping": 0.0
+      }
+    }
+  },
+  "camera": {
+    "annotator": {
+      "common": {
+        "enabled": true,
+        "rgb_capture": {
+          "type": "rgb",
+          "device": "cpu"
+        }
+      },
+      "cam_head": {
+        "enabled": true,
+        "rgb_capture": {
+          "type": "rgb",
+          "device": "cpu"
+        }
+      },
+      "cam_left_wrist": {
+        "enabled": true,
+        "rgb_capture": {
+          "type": "rgb",
+          "device": "cpu"
+        }
+      },
+      "cam_right_wrist": {
+        "enabled": true,
+        "rgb_capture": {
+          "type": "rgb",
+          "device": "cpu"
+        }
+      }
+    },
+    "cam_head": {
+      "camera": {
+        "type": "Gemini_345Lg",
+        "mesh": "pinhole",
+        "pos": [
+          0.0,
+          -0.41,
+          1.308
+        ],
+        "ori": [
+          30.0,
+          0,
+          0
+        ]
+      }
+    },
+    "default_frequency": 25,
+    "cam_left_wrist": {
+      "camera": {
+        "mount_link": "robot0/camera",
+        "pos": [
+          0,
+          0,
+          0.001
+        ],
+        "ori": [
+          0,
+          -80,
+          -90
+        ],
+        "type": "d435",
+        "mesh": "pinhole"
+      }
+    },
+    "cam_right_wrist": {
+      "camera": {
+        "mount_link": "robot1/camera",
+        "pos": [
+          0,
+          0,
+          0.001
+        ],
+        "ori": [
+          0,
+          -80,
+          -90
+        ],
+        "type": "d435",
+        "mesh": "pinhole"
+      }
+    }
+  },
+  "robot": {
+    "robots": [
+      {
+        "robot_type": "arm",
+        "robot_name": "x5",
+        "coupled": false,
+        "default_root_pos": [
+          -0.3,
+          -0.45,
+          0.765
+        ],
+        "default_root_rot": [
+          0.707,
+          0,
+          0,
+          0.707
+        ],
+        "grasp_perfect_direction": "top_down_little_right",
+        "need_planner": false
+      },
+      {
+        "robot_type": "arm",
+        "robot_name": "x5",
+        "coupled": false,
+        "default_root_pos": [
+          0.3,
+          -0.45,
+          0.765
+        ],
+        "default_root_rot": [
+          0.707,
+          0,
+          0,
+          0.707
+        ],
+        "grasp_perfect_direction": "top_down_little_left",
+        "need_planner": false
+      }
+    ]
+  },
+  "eval_cfg": {
+    "config_name": "arx_x5",
+    "config": {
+      "sim": "sim_config",
+      "scene": "default",
+      "robot": "dual_x5",
+      "camera": "camera_config"
+    },
+    "observation": {
+      "collect_freq": 25,
+      "robot": {
+        "joint_states": true,
+        "world_ee_state": true
+      },
+      "vision": {
+        "approximate_depth": false,
+        "depth": false,
+        "intrinsic_matrix": false,
+        "extrinsic_matrix": false,
+        "shape": true
+      }
+    },
+    "task_name": "build_tower",
+    "num_envs": 1,
+    "device_id": 0,
+    "eval_batch": false,
+    "policy_name": "Pi_05",
+    "additional_info": "codex_hybrid",
+    "seed": 0,
+    "physx_monitor_enabled": false,
+    "eval_num": 1
+  },
+  "deploy_cfg": {
+    "port": 1,
+    "policy_name": "Pi_05"
+  },
+  "task_env": {
+    "Rigid": [
+      {
+        "common": {
+          "xlim": [
+            0.0,
+            0.0
+          ],
+          "ylim": [
+            -0.2,
+            -0.2
+          ],
+          "rotate_rand": false,
+          "relative_plane": "Table"
+        },
+        "category": [
+          {
+            "name": "block",
+            "index": [
+              0
+            ]
+          }
+        ],
+        "select_mode": {
+          "nums": 1,
+          "mode": "allow_duplicate",
+          "label": [
+            "block0"
+          ]
+        }
+      },
+      {
+        "common": {
+          "xlim": [
+            -0.4,
+            -0.17
+          ],
+          "ylim": [
+            -0.2,
+            0.0
+          ],
+          "rotate_deg": [
+            -25,
+            0
+          ],
+          "rotate_rand": true,
+          "relative_plane": "Table"
+        },
+        "category": [
+          {
+            "name": "block",
+            "index": [
+              2
+            ]
+          }
+        ],
+        "select_mode": {
+          "nums": 1,
+          "mode": "allow_duplicate",
+          "label": [
+            "block1"
+          ]
+        }
+      },
+      {
+        "common": {
+          "xlim": [
+            0.17,
+            0.4
+          ],
+          "ylim": [
+            -0.2,
+            0.0
+          ],
+          "rotate_deg": [
+            0,
+            25
+          ],
+          "rotate_rand": true,
+          "relative_plane": "Table"
+        },
+        "category": [
+          {
+            "name": "block",
+            "index": [
+              2
+            ]
+          }
+        ],
+        "select_mode": {
+          "nums": 1,
+          "mode": "allow_duplicate",
+          "label": [
+            "block2"
+          ]
+        }
+      },
+      {
+        "common": {
+          "xlim": [
+            [
+              -0.45,
+              -0.3
+            ],
+            [
+              0.3,
+              0.45
+            ]
+          ],
+          "ylim": [
+            -0.2,
+            0.0
+          ],
+          "rotate_deg": 10,
+          "rotate_rand": true,
+          "relative_plane": "Table",
+          "place_tag": "up/0"
+        },
+        "category": [
+          {
+            "name": "block",
+            "index": [
+              1
+            ]
+          }
+        ],
+        "select_mode": {
+          "nums": 1,
+          "mode": "allow_duplicate",
+          "label": [
+            "block3"
+          ]
+        }
+      },
+      {
+        "common": {
+          "xlim": [
+            [
+              -0.45,
+              -0.3
+            ],
+            [
+              0.3,
+              0.45
+            ]
+          ],
+          "ylim": [
+            -0.2,
+            0.0
+          ],
+          "rotate_deg": 10,
+          "rotate_rand": true,
+          "relative_plane": "Table"
+        },
+        "category": [
+          {
+            "name": "block",
+            "index": [
+              3
+            ]
+          }
+        ],
+        "select_mode": {
+          "nums": 1,
+          "mode": "allow_duplicate",
+          "label": [
+            "block4"
+          ]
+        }
+      },
+      {
+        "common": {
+          "xlim": [
+            -0.4,
+            -0.17
+          ],
+          "ylim": [
+            -0.2,
+            0.0
+          ],
+          "rotate_deg": [
+            -25,
+            0
+          ],
+          "rotate_rand": true,
+          "relative_plane": "Table"
+        },
+        "category": [
+          {
+            "name": "block",
+            "index": [
+              2
+            ]
+          }
+        ],
+        "select_mode": {
+          "nums": 1,
+          "mode": "allow_duplicate",
+          "label": [
+            "block5"
+          ]
+        }
+      },
+      {
+        "common": {
+          "xlim": [
+            0.17,
+            0.4
+          ],
+          "ylim": [
+            -0.2,
+            0.0
+          ],
+          "rotate_deg": [
+            0,
+            25
+          ],
+          "rotate_rand": true,
+          "relative_plane": "Table"
+        },
+        "category": [
+          {
+            "name": "block",
+            "index": [
+              2
+            ]
+          }
+        ],
+        "select_mode": {
+          "nums": 1,
+          "mode": "allow_duplicate",
+          "label": [
+            "block6"
+          ]
+        }
+      },
+      {
+        "common": {
+          "xlim": [
+            0.0,
+            0.0
+          ],
+          "ylim": [
+            -0.3,
+            -0.3
+          ],
+          "rotate_rand": false,
+          "relative_plane": "Table"
+        },
+        "category": [
+          {
+            "name": "block",
+            "index": [
+              4
+            ]
+          }
+        ],
+        "select_mode": {
+          "nums": 1,
+          "mode": "allow_duplicate",
+          "label": [
+            "block7"
+          ]
+        }
+      }
+    ],
+    "Geometry": [
+      {
+        "common": {
+          "xlim": [
+            0.0,
+            0.0
+          ],
+          "ylim": [
+            -0.47,
+            -0.47
+          ],
+          "zlim": [
+            0.715,
+            0.715
+          ],
+          "qpos": [
+            0.707,
+            -0.707,
+            0.0,
+            0.0
+          ],
+          "rotate_rand": false,
+          "relative_plane": "Ground"
+        },
+        "category": [
+          {
+            "name": "camera_stand",
+            "index": [
+              0
+            ]
+          }
+        ],
+        "select_mode": {
+          "nums": 1,
+          "mode": "unique",
+          "label": [
+            "camera_stand"
+          ]
+        }
+      }
+    ]
+  }
+}

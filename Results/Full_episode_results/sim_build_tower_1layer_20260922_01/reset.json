@@ -1,0 +1,33 @@
+{
+  "episode_id": "a1c3811de8fd44fd94e21dc6b8093682",
+  "step_id": 0,
+  "initial_state_hash": "1a64a7ab1894d492080eda4c5ba8b7f9d1b36eea918d9f11eff7bb88f37ced4c",
+  "instruction": "Build a tower using the wooden blocks and wooden boards.",
+  "metadata": {
+    "task": "build_tower",
+    "instruction": "Build a tower using the wooden blocks and wooden boards.",
+    "simulator": "RoboDojo",
+    "robot_adapter": "dual_arx_x5",
+    "control_dt": 0.04,
+    "max_episode_steps": 1050,
+    "action_dim": 14,
+    "action_horizon": 50,
+    "frame": "environment_origin",
+    "eef_link": "link6",
+    "no_rollback": true,
+    "supports_fk_preview": true,
+    "supports_codex_decision_recording": true,
+    "cameras": [
+      "cam_high",
+      "cam_left_wrist",
+      "cam_right_wrist"
+    ],
+    "gripper_semantics": "continuous_0_closed_1_open",
+    "layout_id": 0,
+    "eval_seed": 0,
+    "evaluation_case": null,
+    "initial_state_hash_scope": "robot_proprio_only_not_complete_scene",
+    "policy_version": "OpenPI-JAX/pi05_base_aloha_full_sim_arx-x5_seed_0/d15fb8bd1d29cb30",
+    "native_reset_settling_not_counted_as_policy_controls": true
+  }
+}

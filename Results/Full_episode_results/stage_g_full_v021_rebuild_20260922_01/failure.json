@@ -1,0 +1,8 @@
+{
+  "error": "Traceback (most recent call last):\n  File \"/workspace/harry/GPT-as-Policy/hybrid_rollout/robodojo/skill/run.py\", line 519, in main\n    worker = CodexPolicy(worker_workspace, args.codex, method=args.evaluation_method)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/harry/GPT-as-Policy/hybrid_rollout/robodojo/skill/run.py\", line 174, in __init__\n    self.transport.request('initialize', dict(\n  File \"/workspace/harry/GPT-as-Policy/hybrid_rollout/robodojo/skill/transport.py\", line 91, in request\n    raise RuntimeError(f\"Codex RPC {method} failed: {response['error']}\")\nRuntimeError: Codex RPC initialize failed: {'message': 'Codex app-server stdout closed; inspect stderr.log'}\n",
+  "controller_version": "recoverable_tool_input_v1",
+  "episode_id": null,
+  "step_id": 0,
+  "counters": {},
+  "completed": false
+}
