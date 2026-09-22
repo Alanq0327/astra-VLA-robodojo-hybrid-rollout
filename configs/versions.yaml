@@ -1,0 +1,22 @@
+project:
+  name: astra-vla-robodojo-hybrid-rollout
+
+upstream:
+  gpt_as_policy_commit: 8f3d362b077d8efb77e2a7274d5b2c20e2243846
+  robodojo_commit: ee67a1468510da7624a089164402359f2afc72c8
+  xpolicylab_commit: 432f82b1758c5b1202e42a3dfe014546dbc50871
+
+environment:
+  python: "3.11"
+  pytorch: "2.7"
+  cuda: "12.8"
+  isaac_sim: "5.1.0"
+
+services:
+  student_port: 18830
+  simulator_port: 19113
+
+policy:
+  checkpoint_name: RoboDojo-sim-arx_x5-joint-0/59999
+  action_horizon: 50
+  action_dimension: 14
