@@ -1,0 +1,105 @@
+{
+  "episode_id": "a6196e383521471496c3661bfa656043",
+  "step_id": 0,
+  "task": "build_tower",
+  "max_episode_steps": 1050,
+  "instruction": "Build a tower using the wooden blocks and wooden boards.",
+  "remaining_steps": 1050,
+  "require_native_termination": false,
+  "current_state": [
+    5.115578100012286e-13,
+    -1.156115904982105e-15,
+    1.767066072491508e-17,
+    7.853062682560905e-16,
+    -9.987136985467604e-13,
+    2.5006576670483227e-12,
+    1.0,
+    5.115569426394906e-13,
+    -1.1561103992679478e-15,
+    1.7667572032507807e-17,
+    7.853009213606109e-16,
+    -9.98713048025457e-13,
+    2.5006572333674537e-12,
+    1.0
+  ],
+  "images": [
+    {
+      "camera": "cam_high",
+      "path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/000/cam_high.png"
+    },
+    {
+      "camera": "cam_left_wrist",
+      "path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/000/cam_left_wrist.png"
+    },
+    {
+      "camera": "cam_right_wrist",
+      "path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/000/cam_right_wrist.png"
+    }
+  ],
+  "current_eef": {
+    "left": {
+      "position": [
+        -0.2995290756225586,
+        -0.35229986906051636,
+        0.921500027179718
+      ],
+      "quaternion_wxyz": [
+        0.7069999575614929,
+        -4.327419134142474e-08,
+        -6.000607299938565e-08,
+        0.7072135210037231
+      ],
+      "frame": "environment_origin",
+      "link": "link6",
+      "gripper_opening_command": 1.0,
+      "rpy_deg": [
+        -8.368846687125308e-06,
+        -1.354495023474789e-06,
+        90.01730471953577
+      ]
+    },
+    "right": {
+      "position": [
+        0.3004709482192993,
+        -0.35229986906051636,
+        0.921500027179718
+      ],
+      "quaternion_wxyz": [
+        0.7069999575614929,
+        -4.327419134142474e-08,
+        -6.000607299938565e-08,
+        0.7072135210037231
+      ],
+      "frame": "environment_origin",
+      "link": "link6",
+      "gripper_opening_command": 1.0,
+      "rpy_deg": [
+        -8.368846687125308e-06,
+        -1.354495023474789e-06,
+        90.01730471953577
+      ]
+    }
+  },
+  "robot_profile": "robodojo",
+  "observation_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/000/observation.json",
+  "arrays_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/000/observation.npz",
+  "history_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/history.json",
+  "previous_result": null,
+  "counters": {
+    "student_steps": 0,
+    "edited_steps": 0,
+    "recovery_steps": 0,
+    "predictions": 0
+  },
+  "result": null,
+  "rollout_finished": false,
+  "next_call": {
+    "tool": "pi05_infer",
+    "observation_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/000/observation.json",
+    "output_dir": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/proposals/000"
+  },
+  "task_context": {
+    "process": "Build the supported tower layers using the wooden blocks and boards.",
+    "requires_arm_return": true
+  }
+}

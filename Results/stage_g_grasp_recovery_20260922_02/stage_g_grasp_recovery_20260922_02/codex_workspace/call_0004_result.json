@@ -1,0 +1,282 @@
+{
+  "episode_id": "a6196e383521471496c3661bfa656043",
+  "step_id": 30,
+  "task": "build_tower",
+  "max_episode_steps": 1050,
+  "instruction": "Build a tower using the wooden blocks and wooden boards.",
+  "remaining_steps": 1020,
+  "require_native_termination": false,
+  "current_state": [
+    -0.261103093624115,
+    1.6161272525787354,
+    0.6557535529136658,
+    0.17483334243297577,
+    0.11159712821245193,
+    0.11060826480388641,
+    1.0,
+    0.00440791854634881,
+    -0.006417791824787855,
+    0.001459138817153871,
+    -0.0032985303550958633,
+    -0.00030381634132936597,
+    -0.005693377926945686,
+    0.9992790222167969
+  ],
+  "images": [
+    {
+      "camera": "cam_high",
+      "path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/002/cam_high.png"
+    },
+    {
+      "camera": "cam_left_wrist",
+      "path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/002/cam_left_wrist.png"
+    },
+    {
+      "camera": "cam_right_wrist",
+      "path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/002/cam_right_wrist.png"
+    }
+  ],
+  "current_eef": {
+    "left": {
+      "position": [
+        -0.22251754999160767,
+        -0.1741226315498352,
+        0.892314612865448
+      ],
+      "quaternion_wxyz": [
+        0.7755439281463623,
+        -0.2071695476770401,
+        0.318419873714447,
+        0.5042033791542053
+      ],
+      "frame": "environment_origin",
+      "link": "link6",
+      "gripper_opening_command": 1.0,
+      "rpy_deg": [
+        -0.019444167748574562,
+        44.65276393123654,
+        66.05011840941471
+      ]
+    },
+    "right": {
+      "position": [
+        0.3000335693359375,
+        -0.35274308919906616,
+        0.9221764802932739
+      ],
+      "quaternion_wxyz": [
+        0.7053318619728088,
+        -0.00038560168468393385,
+        -0.0036330814473330975,
+        0.7088677287101746
+      ],
+      "frame": "environment_origin",
+      "link": "link6",
+      "gripper_opening_command": 0.9992790222167969,
+      "rpy_deg": [
+        -0.3262876655381076,
+        -0.2623225241977688,
+        90.28725503962896
+      ]
+    }
+  },
+  "robot_profile": "robodojo",
+  "observation_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/002/observation.json",
+  "arrays_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/002/observation.npz",
+  "history_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/history.json",
+  "previous_result": {
+    "decision": 1,
+    "start_tick": 15,
+    "end_tick": 30,
+    "response": {
+      "request_id": "45e19ac9660f4174a6e313de8ceebe01",
+      "mode": "student",
+      "steps": 15,
+      "reason": "The left gripper is approaching the first support block with open fingers. Continue the aligned descent and initial grasp attempt, then inspect the result.",
+      "assessment": {
+        "task_progress": {
+          "verified_completed": [],
+          "currently_attempting": "Approach and acquire the first left support block.",
+          "remaining": [
+            "Acquire the first left support block.",
+            "Lift the same block and verify retention in a later observation."
+          ]
+        },
+        "current_subgoal": "Align and descend onto the first left support block.",
+        "execution_status": "progressing",
+        "execution_evidence": "At step 15 the head image shows the left fingers beside the front-left support block; the left wrist image shows the block near the open fingers. Acquisition has not yet been demonstrated.",
+        "expected_next_intent": "Descend and close around the first left support block.",
+        "predicted_next_intent": "The left gripper descends at the block and begins closing while the right arm stays near its start pose.",
+        "intent_status": "aligned",
+        "intent_evidence": "FK rows 0–14 move the left EEF from about (-0.244,-0.217,0.934) to (-0.223,-0.174,0.892), with opening decreasing from 0.999 to 0.525. Later rows continue closing and lift."
+      },
+      "edit": {
+        "left": {
+          "delta_position": [
+            0,
+            0,
+            0
+          ],
+          "delta_rotation_vector": [
+            0,
+            0,
+            0
+          ],
+          "gripper": "keep"
+        },
+        "right": {
+          "delta_position": [
+            0,
+            0,
+            0
+          ],
+          "delta_rotation_vector": [
+            0,
+            0,
+            0
+          ],
+          "gripper": "keep"
+        }
+      },
+      "target": {
+        "left": {
+          "position": [
+            -0.246184,
+            -0.223402,
+            0.937726
+          ],
+          "quaternion_wxyz": [
+            0.773996,
+            -0.194661,
+            0.298568,
+            0.523349
+          ],
+          "gripper_closed": false
+        },
+        "right": {
+          "position": [
+            0.300133,
+            -0.352796,
+            0.922913
+          ],
+          "quaternion_wxyz": [
+            0.705721,
+            0.001813,
+            -0.002659,
+            0.708482
+          ],
+          "gripper_closed": false
+        }
+      }
+    },
+    "simulator_decision_receipt": {
+      "episode_id": "a6196e383521471496c3661bfa656043",
+      "step_id": 15,
+      "physical_steps": 0,
+      "decision": 1,
+      "record_path": "/workspace/harry/results/sim_grasp_recovery_20260922_01/a6196e383521471496c3661bfa656043/codex_decisions/001.json",
+      "status": "decision_received_not_execution_ack"
+    },
+    "executed_steps": 15,
+    "source": "student",
+    "source_detail": "student",
+    "prediction_id": "fa1a4a6df8ca4726974d04d10769102e",
+    "selected_student_steps": 15,
+    "discarded_student_steps": 35,
+    "executed_gripper_closed": [
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      }
+    ],
+    "assessment": {
+      "task_progress": {
+        "verified_completed": [],
+        "currently_attempting": "Approach and acquire the first left support block.",
+        "remaining": [
+          "Acquire the first left support block.",
+          "Lift the same block and verify retention in a later observation."
+        ]
+      },
+      "current_subgoal": "Align and descend onto the first left support block.",
+      "execution_status": "progressing",
+      "execution_evidence": "At step 15 the head image shows the left fingers beside the front-left support block; the left wrist image shows the block near the open fingers. Acquisition has not yet been demonstrated.",
+      "expected_next_intent": "Descend and close around the first left support block.",
+      "predicted_next_intent": "The left gripper descends at the block and begins closing while the right arm stays near its start pose.",
+      "intent_status": "aligned",
+      "intent_evidence": "FK rows 0–14 move the left EEF from about (-0.244,-0.217,0.934) to (-0.223,-0.174,0.892), with opening decreasing from 0.999 to 0.525. Later rows continue closing and lift."
+    },
+    "takeover_trigger": "none",
+    "terminal": false,
+    "native_success": false
+  },
+  "counters": {
+    "student_steps": 30,
+    "edited_steps": 0,
+    "recovery_steps": 0,
+    "predictions": 2
+  },
+  "result": null,
+  "rollout_finished": false,
+  "next_call": {
+    "tool": "pi05_infer",
+    "observation_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/002/observation.json",
+    "output_dir": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/proposals/002"
+  }
+}

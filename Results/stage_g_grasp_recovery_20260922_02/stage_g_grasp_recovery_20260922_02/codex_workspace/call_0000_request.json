@@ -1,0 +1,8 @@
+{
+  "call_id": "exec-d06b9515-f124-4a15-88cc-958137996503",
+  "tool": "robodojo_start",
+  "arguments": {
+    "task": "build_tower",
+    "output_dir": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/000"
+  }
+}

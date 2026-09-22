@@ -1,0 +1,30 @@
+{
+  "pilot": {
+    "recovery_success": false,
+    "verification": "teacher_visual_two_distinct_held_observations_requires_video_review",
+    "reports": [
+      {
+        "stage": "failed",
+        "step_id": 45,
+        "evidence": "At step 45, cam_high shows the first left support block resting on the tabletop below the raised left gripper. cam_left_wrist shows the same block on the wood surface with both black fingertips separated from its sides; it has not followed the fingers upward from the step-30 approach. The first left support block was not acquired.",
+        "observation_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/003/observation.json",
+        "verifier": "teacher_visual_unreviewed"
+      },
+      {
+        "stage": "held",
+        "step_id": 68,
+        "evidence": "At step 68, cam_left_wrist shows the same first left support block tightly bracketed by both black fingers, centered and elevated over the wood surface. Cam_high shows the block at the raised left fingertips, above and inward from the other left block remaining on the tabletop. The block has followed the left hand's lift and inward motion from step 60; the step-45 failed acquisition is already recorded. Retention still needs verification in a later observation.",
+        "observation_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/005/observation.json",
+        "verifier": "teacher_visual_unreviewed"
+      }
+    ],
+    "teacher_correction_executed": false,
+    "not_native_task_success": true
+  },
+  "next_call": {
+    "tool": "pi05_infer",
+    "observation_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/005/observation.json",
+    "output_dir": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/proposals/005"
+  },
+  "physical_steps": 0
+}

@@ -1,0 +1,46 @@
+{
+  "argv": [
+    "/usr/local/bin/codex",
+    "app-server",
+    "--stdio",
+    "--strict-config",
+    "-c",
+    "model=\"gpt-6-astra\"",
+    "-c",
+    "model_provider=\"openai\"",
+    "-c",
+    "model_reasoning_effort=\"xhigh\"",
+    "-c",
+    "sqlite_home=\"/workspace/harry/rollout_shared/private/auth_profiles/codex_a/codex_home/runtime_db\"",
+    "-c",
+    "log_dir=\"/workspace/harry/rollout_shared/private/auth_profiles/codex_a/codex_home/runtime_logs\"",
+    "-c",
+    "default_permissions=\"rollout_agent\"",
+    "-c",
+    "features.shell_tool=true",
+    "-c",
+    "features.view_image=true",
+    "-c",
+    "shell_environment_policy.inherit=\"all\"",
+    "-c",
+    "permissions.rollout_agent.extends=\":workspace\"",
+    "-c",
+    "permissions.rollout_agent.filesystem={\"/workspace/harry/results/stage_g_grasp_recovery_20260922_02\" = \"read\", \"/workspace/harry/results/stage_g_grasp_recovery_20260922_02/codex_workspace/agent\" = \"write\"}"
+  ],
+  "config": {
+    "model": "gpt-6-astra",
+    "model_provider": "openai",
+    "model_reasoning_effort": "xhigh",
+    "sqlite_home": "/workspace/harry/rollout_shared/private/auth_profiles/codex_a/codex_home/runtime_db",
+    "log_dir": "/workspace/harry/rollout_shared/private/auth_profiles/codex_a/codex_home/runtime_logs",
+    "default_permissions": "rollout_agent",
+    "features.shell_tool": true,
+    "features.view_image": true,
+    "shell_environment_policy.inherit": "all",
+    "permissions.rollout_agent.extends": ":workspace",
+    "permissions.rollout_agent.filesystem": {
+      "/workspace/harry/results/stage_g_grasp_recovery_20260922_02": "read",
+      "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/codex_workspace/agent": "write"
+    }
+  }
+}
