@@ -1,0 +1,34 @@
+experiment:
+  name: external_grasp_fault_recovery
+  task: build_tower
+  seed: 0
+  evaluation_method: pi05_plus_gpt
+  max_decisions: 12
+
+runtime:
+  bounded_context: true
+  image_max_edge: 480
+  student_port: 18830
+  simulator_port: 19113
+
+perturbation:
+  enabled: true
+  target: left_gripper
+  action_channel: 6
+  start_action_index: 15
+  end_action_index: 44
+  forced_value: 1.0
+  duration_steps: 30
+  attribution: external_gripper_fault_not_teacher_edit
+
+recovery:
+  detect_failed_acquisition: true
+  require_held_observation: true
+  require_later_retention_observation: true
+  stop_on_verified_recovery: true
+
+recording:
+  save_original_action: true
+  save_executed_action: true
+  save_three_camera_views: true
+  save_teacher_decisions: true
