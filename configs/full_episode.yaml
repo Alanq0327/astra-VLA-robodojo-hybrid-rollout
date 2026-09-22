@@ -1,0 +1,22 @@
+experiment:
+  name: build_tower_1layer_full_episode
+  task: build_tower
+  seed: 0
+  evaluation_method: pi05_plus_gpt
+  max_decisions: 0
+
+runtime:
+  bounded_context: true
+  image_max_edge: 480
+  student_port: 18830
+  simulator_port: 19113
+
+termination:
+  use_task_evaluator: true
+  stop_on_verified_success: true
+
+recording:
+  save_actions: true
+  save_observations: true
+  save_decisions: true
+  save_checkpoints: true
