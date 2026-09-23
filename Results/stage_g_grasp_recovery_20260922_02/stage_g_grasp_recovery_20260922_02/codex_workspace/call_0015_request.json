@@ -1,8 +1,0 @@
-{
-  "call_id": "exec-a857019c-c84d-4148-b9d6-4d7038e28aee",
-  "tool": "robodojo_report_grasp",
-  "arguments": {
-    "stage": "recovered",
-    "evidence": "At step 73, after five executed student transport steps from the step-68 held report, cam_left_wrist shows the same first left support block still centered between both black fingers, with no visible slipping or separation. Cam_high shows the block retained at the raised left fingertips, distinct from the other left block on the tabletop. Cam_right_wrist shows the two right support blocks still on the table. Together with the step-68 images, this later observation verifies continued elevated retention of the same block after the failed acquisition recorded at step 45."
-  }
-}

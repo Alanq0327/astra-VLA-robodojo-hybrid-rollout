@@ -1,8 +1,0 @@
-{
-  "call_id": "exec-ae4de903-2464-4def-a7b4-a04e88eb7e85",
-  "tool": "robodojo_report_grasp",
-  "arguments": {
-    "stage": "held",
-    "evidence": "At step 68, cam_left_wrist shows the same first left support block tightly bracketed by both black fingers, centered and elevated over the wood surface. Cam_high shows the block at the raised left fingertips, above and inward from the other left block remaining on the tabletop. The block has followed the left hand's lift and inward motion from step 60; the step-45 failed acquisition is already recorded. Retention still needs verification in a later observation."
-  }
-}

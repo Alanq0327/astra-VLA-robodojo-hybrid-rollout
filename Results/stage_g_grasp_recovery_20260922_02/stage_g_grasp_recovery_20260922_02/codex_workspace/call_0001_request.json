@@ -1,8 +1,0 @@
-{
-  "call_id": "exec-1129bdd2-3218-4633-b03e-a0fb4f89bd76",
-  "tool": "pi05_infer",
-  "arguments": {
-    "observation_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/000/observation.json",
-    "output_dir": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/proposals/000"
-  }
-}
