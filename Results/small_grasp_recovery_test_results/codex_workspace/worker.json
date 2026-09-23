@@ -1,0 +1,53 @@
+{
+  "model": "gpt-6-astra",
+  "model_provider": "openai",
+  "controller_version": "recoverable_tool_input_v1",
+  "evaluation_method": "pi05_plus_gpt",
+  "reasoning_effort": "xhigh",
+  "context_version": "v3",
+  "codex_version": "codex-cli 0.153.4",
+  "thread_id": "01a0c9f5-cb2f-7cf0-9703-9958e4dd637b",
+  "pid": 67886,
+  "prompt_sha256": "8d59790cd607d75abb7d2db1a32fc7b402404b15e909efd09ba6bbe9396b4f0d",
+  "no_rollback": true,
+  "tools": [
+    "robodojo_start",
+    "pi05_infer",
+    "robodojo_execute",
+    "robodojo_report_grasp"
+  ],
+  "service_tools_are_additive": true,
+  "agent_workspace": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/codex_workspace/agent",
+  "native_tools": "Codex defaults; shell and image viewing explicitly enabled",
+  "network_recovery": {
+    "revision": "same_thread_continue_v1",
+    "backoff_seconds": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "restart_simulator": false,
+    "new_thread": false,
+    "replay_actions": false
+  },
+  "codex_image_max_edge": 480,
+  "policy_images_resized": false,
+  "baseline_full_conversation_available": false
+}

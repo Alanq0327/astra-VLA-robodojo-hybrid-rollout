@@ -1,0 +1,298 @@
+{
+  "episode_id": "a6196e383521471496c3661bfa656043",
+  "step_id": 15,
+  "task": "build_tower",
+  "max_episode_steps": 1050,
+  "instruction": "Build a tower using the wooden blocks and wooden boards.",
+  "remaining_steps": 1035,
+  "require_native_termination": false,
+  "current_state": [
+    -0.21657633781433105,
+    1.251688003540039,
+    0.5573763847351074,
+    -0.04079946130514145,
+    0.11891548335552216,
+    0.1218438595533371,
+    0.9997126460075378,
+    0.003417308907955885,
+    -0.005074103828519583,
+    0.003672618418931961,
+    -0.0024248245172202587,
+    -0.00018964386254083365,
+    -0.0012063455069437623,
+    0.9984250068664551
+  ],
+  "images": [
+    {
+      "camera": "cam_high",
+      "path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/001/cam_high.png"
+    },
+    {
+      "camera": "cam_left_wrist",
+      "path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/001/cam_left_wrist.png"
+    },
+    {
+      "camera": "cam_right_wrist",
+      "path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/001/cam_right_wrist.png"
+    }
+  ],
+  "current_eef": {
+    "left": {
+      "position": [
+        -0.24618412554264069,
+        -0.2234024554491043,
+        0.9377263188362122
+      ],
+      "quaternion_wxyz": [
+        0.7739959955215454,
+        -0.19466139376163483,
+        0.29856839776039124,
+        0.5233489274978638
+      ],
+      "frame": "environment_origin",
+      "link": "link6",
+      "gripper_opening_command": 0.9997126460075378,
+      "rpy_deg": [
+        0.8584281881105572,
+        41.753951711442575,
+        68.45776733391956
+      ]
+    },
+    "right": {
+      "position": [
+        0.30013349652290344,
+        -0.3527964949607849,
+        0.9229125380516052
+      ],
+      "quaternion_wxyz": [
+        0.7057211995124817,
+        0.0018133983248844743,
+        -0.0026585643645375967,
+        0.7084822654724121
+      ],
+      "frame": "environment_origin",
+      "link": "link6",
+      "gripper_opening_command": 0.9984250068664551,
+      "rpy_deg": [
+        -0.06919088103924277,
+        -0.36222245071442977,
+        90.22394497140417
+      ]
+    }
+  },
+  "robot_profile": "robodojo",
+  "observation_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/001/observation.json",
+  "arrays_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/001/observation.npz",
+  "history_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/history.json",
+  "previous_result": {
+    "decision": 0,
+    "start_tick": 0,
+    "end_tick": 15,
+    "response": {
+      "request_id": "019324a6e4714e57b88c540e31342226",
+      "mode": "student",
+      "steps": 15,
+      "reason": "The open left-gripper approach is appropriate; execute the first 15 steps and inspect alignment.",
+      "assessment": {
+        "task_progress": {
+          "verified_completed": [],
+          "currently_attempting": "Approach and acquire the first left support block.",
+          "remaining": [
+            "Acquire the first left support block.",
+            "Lift and verify stable retention for the recovery pilot."
+          ]
+        },
+        "current_subgoal": "Approach the first left support block.",
+        "execution_status": "not_started",
+        "execution_evidence": "At step 0 all blocks rest on the table and both grippers are empty.",
+        "expected_next_intent": "Move the open left gripper toward the first left support block.",
+        "predicted_next_intent": "The left gripper advances inward toward the front-left support block while the right arm stays near its start pose.",
+        "intent_status": "aligned",
+        "intent_evidence": "The first 15 FK rows move the left EEF from approximately (-0.300,-0.352,0.922) to (-0.246,-0.222,0.937) with an open gripper; later rows descend and close at that block."
+      },
+      "edit": {
+        "left": {
+          "delta_position": [
+            0,
+            0,
+            0
+          ],
+          "delta_rotation_vector": [
+            0,
+            0,
+            0
+          ],
+          "gripper": "keep"
+        },
+        "right": {
+          "delta_position": [
+            0,
+            0,
+            0
+          ],
+          "delta_rotation_vector": [
+            0,
+            0,
+            0
+          ],
+          "gripper": "keep"
+        }
+      },
+      "target": {
+        "left": {
+          "position": [
+            -0.2995290756225586,
+            -0.35229986906051636,
+            0.921500027179718
+          ],
+          "quaternion_wxyz": [
+            0.7069999575614929,
+            -4.327419134142474e-08,
+            -6.000607299938565e-08,
+            0.7072135210037231
+          ],
+          "frame": "environment_origin",
+          "link": "link6",
+          "gripper_opening_command": 1,
+          "rpy_deg": [
+            -8.368846687125308e-06,
+            -1.354495023474789e-06,
+            90.01730471953577
+          ],
+          "gripper_closed": false
+        },
+        "right": {
+          "position": [
+            0.3004709482192993,
+            -0.35229986906051636,
+            0.921500027179718
+          ],
+          "quaternion_wxyz": [
+            0.7069999575614929,
+            -4.327419134142474e-08,
+            -6.000607299938565e-08,
+            0.7072135210037231
+          ],
+          "frame": "environment_origin",
+          "link": "link6",
+          "gripper_opening_command": 1,
+          "rpy_deg": [
+            -8.368846687125308e-06,
+            -1.354495023474789e-06,
+            90.01730471953577
+          ],
+          "gripper_closed": false
+        }
+      }
+    },
+    "simulator_decision_receipt": {
+      "episode_id": "a6196e383521471496c3661bfa656043",
+      "step_id": 0,
+      "physical_steps": 0,
+      "decision": 0,
+      "record_path": "/workspace/harry/results/sim_grasp_recovery_20260922_01/a6196e383521471496c3661bfa656043/codex_decisions/000.json",
+      "status": "decision_received_not_execution_ack"
+    },
+    "executed_steps": 15,
+    "source": "student",
+    "source_detail": "student",
+    "prediction_id": "4e268780f37f41ba945ad3b4339a1152",
+    "selected_student_steps": 15,
+    "discarded_student_steps": 35,
+    "executed_gripper_closed": [
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      }
+    ],
+    "assessment": {
+      "task_progress": {
+        "verified_completed": [],
+        "currently_attempting": "Approach and acquire the first left support block.",
+        "remaining": [
+          "Acquire the first left support block.",
+          "Lift and verify stable retention for the recovery pilot."
+        ]
+      },
+      "current_subgoal": "Approach the first left support block.",
+      "execution_status": "not_started",
+      "execution_evidence": "At step 0 all blocks rest on the table and both grippers are empty.",
+      "expected_next_intent": "Move the open left gripper toward the first left support block.",
+      "predicted_next_intent": "The left gripper advances inward toward the front-left support block while the right arm stays near its start pose.",
+      "intent_status": "aligned",
+      "intent_evidence": "The first 15 FK rows move the left EEF from approximately (-0.300,-0.352,0.922) to (-0.246,-0.222,0.937) with an open gripper; later rows descend and close at that block."
+    },
+    "takeover_trigger": "none",
+    "terminal": false,
+    "native_success": false
+  },
+  "counters": {
+    "student_steps": 15,
+    "edited_steps": 0,
+    "recovery_steps": 0,
+    "predictions": 1
+  },
+  "result": null,
+  "rollout_finished": false,
+  "next_call": {
+    "tool": "pi05_infer",
+    "observation_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/001/observation.json",
+    "output_dir": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/proposals/001"
+  }
+}

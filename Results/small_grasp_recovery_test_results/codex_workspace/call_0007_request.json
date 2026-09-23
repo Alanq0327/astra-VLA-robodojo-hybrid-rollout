@@ -1,0 +1,8 @@
+{
+  "call_id": "exec-bf8dec95-c894-400c-9f54-89dfaf722b9d",
+  "tool": "robodojo_report_grasp",
+  "arguments": {
+    "stage": "failed",
+    "evidence": "At step 45, cam_high shows the first left support block resting on the tabletop below the raised left gripper. cam_left_wrist shows the same block on the wood surface with both black fingertips separated from its sides; it has not followed the fingers upward from the step-30 approach. The first left support block was not acquired."
+  }
+}

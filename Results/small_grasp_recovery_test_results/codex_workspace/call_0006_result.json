@@ -1,0 +1,282 @@
+{
+  "episode_id": "a6196e383521471496c3661bfa656043",
+  "step_id": 45,
+  "task": "build_tower",
+  "max_episode_steps": 1050,
+  "instruction": "Build a tower using the wooden blocks and wooden boards.",
+  "remaining_steps": 1005,
+  "require_native_termination": false,
+  "current_state": [
+    -0.262673556804657,
+    1.5265693664550781,
+    0.7246696949005127,
+    0.016787266358733177,
+    0.11112869530916214,
+    0.10719164460897446,
+    1.0,
+    0.005073647480458021,
+    -0.008059194311499596,
+    0.0007913099834695458,
+    -0.0018154390854761004,
+    0.0004004255461040884,
+    -0.007901140488684177,
+    0.9985621571540833
+  ],
+  "images": [
+    {
+      "camera": "cam_high",
+      "path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/003/cam_high.png"
+    },
+    {
+      "camera": "cam_left_wrist",
+      "path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/003/cam_left_wrist.png"
+    },
+    {
+      "camera": "cam_right_wrist",
+      "path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/003/cam_right_wrist.png"
+    }
+  ],
+  "current_eef": {
+    "left": {
+      "position": [
+        -0.2219221442937851,
+        -0.1735885739326477,
+        0.923873245716095
+      ],
+      "quaternion_wxyz": [
+        0.7755201458930969,
+        -0.2080508917570114,
+        0.317642480134964,
+        0.5043673515319824
+      ],
+      "frame": "environment_origin",
+      "link": "link6",
+      "gripper_opening_command": 1.0,
+      "rpy_deg": [
+        -0.18343344688190275,
+        44.63151190492118,
+        66.00144734984707
+      ]
+    },
+    "right": {
+      "position": [
+        0.2999894618988037,
+        -0.3527976870536804,
+        0.9222186803817749
+      ],
+      "quaternion_wxyz": [
+        0.7053454518318176,
+        -0.0002921266423072666,
+        -0.005280385259538889,
+        0.7088439464569092
+      ],
+      "frame": "environment_origin",
+      "link": "link6",
+      "gripper_opening_command": 0.9985621571540833,
+      "rpy_deg": [
+        -0.45254022273638445,
+        -0.40307040449871023,
+        90.28507373054894
+      ]
+    }
+  },
+  "robot_profile": "robodojo",
+  "observation_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/003/observation.json",
+  "arrays_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/003/observation.npz",
+  "history_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/history.json",
+  "previous_result": {
+    "decision": 2,
+    "start_tick": 30,
+    "end_tick": 45,
+    "response": {
+      "request_id": "ad50d4e2dc9742d9ba5212c710b61dcf",
+      "mode": "student",
+      "steps": 15,
+      "reason": "The block is centered between the open left fingers on the tabletop. Continue the proposed closure and initial lift, then inspect whether the block moves with the fingers.",
+      "assessment": {
+        "task_progress": {
+          "verified_completed": [],
+          "currently_attempting": "Acquire the first left support block.",
+          "remaining": [
+            "Acquire the first left support block.",
+            "Lift the same block and verify retention in a later observation."
+          ]
+        },
+        "current_subgoal": "Close around the first left support block and begin lifting.",
+        "execution_status": "progressing",
+        "execution_evidence": "At step 30 the left wrist image shows the first block centered between open fingers, while the head view shows it still at table level. The approach has progressed, but a grasp has not been demonstrated.",
+        "expected_next_intent": "Close around the first left support block and lift it.",
+        "predicted_next_intent": "The left gripper closes at the block and begins a near-vertical lift; the right arm stays near its initial pose.",
+        "intent_status": "aligned",
+        "intent_evidence": "Rows 0–14 keep left x/y near (-0.222,-0.174), reduce opening from 0.91 to 0.33, then raise z from 0.893 to 0.926. The finite 50x14 proposal has a maximum successive joint step of 0.083 rad."
+      },
+      "edit": {
+        "left": {
+          "delta_position": [
+            0,
+            0,
+            0
+          ],
+          "delta_rotation_vector": [
+            0,
+            0,
+            0
+          ],
+          "gripper": "keep"
+        },
+        "right": {
+          "delta_position": [
+            0,
+            0,
+            0
+          ],
+          "delta_rotation_vector": [
+            0,
+            0,
+            0
+          ],
+          "gripper": "keep"
+        }
+      },
+      "target": {
+        "left": {
+          "position": [
+            -0.22251755,
+            -0.17412263,
+            0.89231461
+          ],
+          "quaternion_wxyz": [
+            0.77554393,
+            -0.20716955,
+            0.31841987,
+            0.50420338
+          ],
+          "gripper_closed": false
+        },
+        "right": {
+          "position": [
+            0.30003357,
+            -0.35274309,
+            0.92217648
+          ],
+          "quaternion_wxyz": [
+            0.70533186,
+            -0.0003856,
+            -0.00363308,
+            0.70886773
+          ],
+          "gripper_closed": false
+        }
+      }
+    },
+    "simulator_decision_receipt": {
+      "episode_id": "a6196e383521471496c3661bfa656043",
+      "step_id": 30,
+      "physical_steps": 0,
+      "decision": 2,
+      "record_path": "/workspace/harry/results/sim_grasp_recovery_20260922_01/a6196e383521471496c3661bfa656043/codex_decisions/002.json",
+      "status": "decision_received_not_execution_ack"
+    },
+    "executed_steps": 15,
+    "source": "student",
+    "source_detail": "student",
+    "prediction_id": "46445f4064314838bffdd82472bb9e23",
+    "selected_student_steps": 15,
+    "discarded_student_steps": 35,
+    "executed_gripper_closed": [
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      },
+      {
+        "left": false,
+        "right": false
+      }
+    ],
+    "assessment": {
+      "task_progress": {
+        "verified_completed": [],
+        "currently_attempting": "Acquire the first left support block.",
+        "remaining": [
+          "Acquire the first left support block.",
+          "Lift the same block and verify retention in a later observation."
+        ]
+      },
+      "current_subgoal": "Close around the first left support block and begin lifting.",
+      "execution_status": "progressing",
+      "execution_evidence": "At step 30 the left wrist image shows the first block centered between open fingers, while the head view shows it still at table level. The approach has progressed, but a grasp has not been demonstrated.",
+      "expected_next_intent": "Close around the first left support block and lift it.",
+      "predicted_next_intent": "The left gripper closes at the block and begins a near-vertical lift; the right arm stays near its initial pose.",
+      "intent_status": "aligned",
+      "intent_evidence": "Rows 0–14 keep left x/y near (-0.222,-0.174), reduce opening from 0.91 to 0.33, then raise z from 0.893 to 0.926. The finite 50x14 proposal has a maximum successive joint step of 0.083 rad."
+    },
+    "takeover_trigger": "none",
+    "terminal": false,
+    "native_success": false
+  },
+  "counters": {
+    "student_steps": 45,
+    "edited_steps": 0,
+    "recovery_steps": 0,
+    "predictions": 3
+  },
+  "result": null,
+  "rollout_finished": false,
+  "next_call": {
+    "tool": "pi05_infer",
+    "observation_path": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/observations/003/observation.json",
+    "output_dir": "/workspace/harry/results/stage_g_grasp_recovery_20260922_02/proposals/003"
+  }
+}
